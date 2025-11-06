@@ -36,3 +36,40 @@ button :hover{
     background-color: purple;
 }
 
+/* Estilo para a caixa de resultado da análise */
+.analise-box {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Contêiner do gráfico (Layout usando Grid ou Flexbox é opcional aqui) */
+.grafico-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Coluna para o label e coluna para a barra */
+    gap: 10px;
+    align-items: center;
+}
+
+/* O fundo da barra (o 100% possível) */
+.grafico-barra-bg {
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden; /* Importante para que a barra interna fique contida */
+}
+
+/* A barra que se move (a pontuação) */
+.grafico-barra {
+    height: 100%;
+    background-color: #e74c3c; /* Cor do seu tema */
+    transition: width 1s ease-out; /* Adiciona uma animação suave! */
+}
+
+.grafico-barra-label {
+    font-weight: bold;
+    font-size: 0.9em;
+}
