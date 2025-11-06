@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupido Lógico - Análise de Relacionamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cupido Lógico</h1>
+        <p>Responda com honestidade para receber uma análise estruturada do seu relacionamento.</p>
+
+        <form id="analise-form">
+
+            <div id="etapa-1" class="etapa-formulario">
+                <h2>Seção 1: Comunicação</h2>
+                
+                <label for="comunicacao-1">1. Conversamos sobre sentimentos mais profundos regularmente?</label>
+                <select id="comunicacao-1" name="c1">
+                    <option value="10">Sempre</option>
+                    <option value="5">Às vezes</option>
+                    <option value="0">Raramente</option>
+                </select>
+                
+                <button type="button" onclick="avancarEtapa()">Próximo &rarr;</button>
+            </div>
+
+            <div id="etapa-2" class="etapa-formulario" style="display: none;">
+                <h2>Seção 2: Conflitos e Diferenças</h2>
+                
+                <label for="conflito-1">2. Conseguimos resolver desacordos de forma calma e respeitosa?</label>
+                <select id="conflito-1" name="co1">
+                    <option value="10">Sempre</option>
+                    <option value="5">Na maioria das vezes</option>
+                    <option value="0">Raramente/Gritamos</option>
+                </select>
+                
+                <button type="button" onclick="voltarEtapa()">&larr; Anterior</button>
+                <button type="button" onclick="avancarEtapa()">Próximo &rarr;</button>
+            </div>
+
+            <div id="etapa-3" class="etapa-formulario" style="display: none;">
+                <h2>Seção 3: Metas e Futuro</h2>
+                
+                <label for="futuro-1">3. Temos visões alinhadas sobre o futuro (carreira, casa, etc.)?</label>
+                <select id="futuro-1" name="f1">
+                    <option value="10">Totalmente alinhadas</option>
+                    <option value="5">Em parte</option>
+                    <option value="0">Visões diferentes ou nunca conversamos</option>
+                </select>
+
+                <button type="button" onclick="voltarEtapa()">&larr; Anterior</button>
+                <button type="button" onclick="finalizarAnalise()">Finalizar Análise</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
